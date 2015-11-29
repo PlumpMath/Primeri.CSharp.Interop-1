@@ -1,2 +1,2 @@
-# Primeri.CSharp.Interop
+# Interop 
 CSharp Interop
