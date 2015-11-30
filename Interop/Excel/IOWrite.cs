@@ -1,10 +1,13 @@
 ﻿using System;
+using InteropExcel = Microsoft.Office.Interop.Excel;
 
 namespace Excel
 {
 	public class IOWrite
 	{
 		private DataStruct _data;
+
+		private InteropExcel.Application excel;
 
 		public IOWrite (DataStruct data)
 		{
@@ -13,7 +16,7 @@ namespace Excel
 		public bool exportTable ()
 		{
 			try
-			{
+			{ 
 				//междинни проверки
 				return true;
 			}catch{
