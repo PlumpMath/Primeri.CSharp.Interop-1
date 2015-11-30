@@ -17,6 +17,11 @@ namespace Excel
 			//Проверка на таблицата
 			data.printTable ();
 
+			write.exportTable ();
+			write.runFile ();
+
+
+
 		}
 	}
 }
