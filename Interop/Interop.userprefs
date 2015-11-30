@@ -1,1 +1,14 @@
-﻿<Properties StartupItem="Excel\Excel.csproj" />
+﻿<Properties StartupItem="Excel\Excel.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Excel\DataStruct.cs">
+    <Files>
+      <File FileName="Excel\Program.cs" Line="14" Column="4" />
+      <File FileName="Excel\IOWrite.cs" Line="10" Column="4" />
+      <File FileName="Excel\DataStruct.cs" Line="26" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
