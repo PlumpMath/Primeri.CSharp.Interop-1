@@ -1,10 +1,9 @@
 ﻿<Properties StartupItem="Excel\Excel.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Excel\DataStruct.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Excel\IOWrite.cs">
     <Files>
-      <File FileName="Excel\Program.cs" Line="14" Column="4" />
-      <File FileName="Excel\IOWrite.cs" Line="10" Column="4" />
-      <File FileName="Excel\DataStruct.cs" Line="26" Column="4" />
+      <File FileName="Excel\Program.cs" Line="15" Column="45" />
+      <File FileName="Excel\IOWrite.cs" Line="73" Column="82" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

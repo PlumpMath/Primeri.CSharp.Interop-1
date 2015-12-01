@@ -11,6 +11,7 @@ namespace Excel
 
 		public IOWrite (DataStruct data)
 		{
+			_data = data;
 		}
 
 		public bool exportTable ()
@@ -32,6 +33,16 @@ namespace Excel
 
 				//Попълване на таблицата
 
+				int i = 1;
+
+				addRow ( new DataRow ("Първо име", "Фамилия", "Години"), i++, true, 40); i++;
+
+				foreach (DataRow row in _data.table)
+				{
+					addRow ( row, i++, false, -1);
+				}
+
+				i++; addRow (new DataRow  ("Брой редове", "", _data.table.Count.ToString () ), i++, true, -1);
 
 				//Запаметяване и затваряне
 				workbook.SaveCopyAs ( getPath () );
@@ -46,11 +57,28 @@ namespace Excel
 			}
 			return false;
 		}
-		public void addRow ( DataRow _row )
+		public void addRow ( DataRow _dataRow, int _indexRow, bool isBold, int color )
 		{
 			try
 			{
-				
+				InteropExcel.Range range;
+
+				//Форматираме
+				range = excel.Range ["A" + _indexRow.ToString(), "C" + _indexRow.ToString()];
+
+				if ( color > 0 ) range.Interior.ColorIndex = color; //-1
+				if ( isBold ) range.Font.Bold = isBold;
+
+				//Въвеждаме данните клетка по клетка
+				range = excel.Range ["A" + _indexRow.ToString(), "A" + _indexRow.ToString()];
+				range.Value2 = _dataRow.firstName;
+
+				range = excel.Range ["B" + _indexRow.ToString(), "B" + _indexRow.ToString()];
+				range.Value2 = _dataRow.lastName; 
+
+				range = excel.Range ["C" + _indexRow.ToString(), "C" + _indexRow.ToString()];
+				range.Value2 = _dataRow.age; 
+
 			}catch{
 			}
 		}
